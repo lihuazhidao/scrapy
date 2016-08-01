@@ -1,0 +1,35 @@
+﻿
+{
+  "name": "Scrapy",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "百度 搜狗 微博 标注插件",
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon_19.png",
+      "38": "images/icon_38.png"
+    },
+    "default_title": "Marker"
+
+  },
+  "permissions": [
+    "http://m.weibo.cn/*",
+    "http://m.news.baidu.com/*",
+    "http://192.168.0.236:3000/*",
+    "http://localhost:3000/*",
+    "http://weibo.com/*"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "http://m.weibo.cn/*",
+      "http://weibo.com/*",
+      "http://m.news.baidu.com/*",
+      "http://192.168.0.236:3000/*",
+      "http://localhost:3000/*",
+      "http://weibo.com/*"
+
+    ],
+    "css": ["style.css"],
+    "js": ["dist.js"]
+  }]
+}
